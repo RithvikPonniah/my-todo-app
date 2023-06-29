@@ -22,7 +22,7 @@ for index,todo in enumerate(todos) :
         sl.experimental_rerun()
 
 sl.text_input(label="Enter a To do",placeholder="Add new todo ...",on_change=addTodo,key="new_todo")
-sl.session_state
+#sl.session_state
 
 
 
