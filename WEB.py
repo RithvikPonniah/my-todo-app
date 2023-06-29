@@ -9,7 +9,7 @@ def addTodo():
     todos.append(todo+"\n")
     todosModule.addTodo(todos)
 
-sl.title("Rithvik's Todos")
+sl.title("Rithviks Todos")
 sl.subheader("Todos app")
 sl.write("This app is to increase your efficiency and productivity")
 
