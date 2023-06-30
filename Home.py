@@ -9,10 +9,14 @@ def addTodo():
     todos.append(todo+"\n")
     todosModule.addTodo(todos)
 
-sl.title("Rithviks Todos")
-sl.subheader("Todos app")
-sl.write("This app is to increase your efficiency and productivity")
+sl.set_page_config(layout="wide")
 
+sl.title("Todos Today")
+sl.subheader("Todos app")
+sl.write("This app is to <b>increase</b> your <b>efficiency</b> and <b>productivity</b>",
+         unsafe_allow_html=True)
+
+sl.text_input(label="Enter a To do",placeholder="Add new todo ...",on_change=addTodo,key="new_todo")
 for index,todo in enumerate(todos) :
     checkbox = sl.checkbox(todo,key=todo)
     if checkbox:
@@ -21,7 +25,6 @@ for index,todo in enumerate(todos) :
         del sl.session_state[todo]
         sl.experimental_rerun()
 
-sl.text_input(label="Enter a To do",placeholder="Add new todo ...",on_change=addTodo,key="new_todo")
 #sl.session_state
 
 
